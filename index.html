@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>4.4 Github Profile</title>
+    <link rel="stylesheet" href="/app/fonts/font/octicons.min.css">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <div class="container col-md-12">
+      <header class="nav-bar col-md-12">
+        <span class="mega-octicon octicon-mark-github"></span>
+        <input type="text" class="search" placeholder="Search Github">
+          <a href="#" class="top-nav">Pull Requests</a>
+          <a href="#" class="top-nav">Issues</a>
+          <a href="#" class="top-nav">Gist</a>
+        <div class="float-right">
+          <a href="#">
+            <span class="octicon octicon-plus"></span>
+            <span class="dropdown-caret"></span>
+          </a>
+          <a href="#">
+            <img class="dropdown-avatar" src="https://avatars.githubusercontent.com/u/21989439?v=3" alt="">
+            <span class="dropdown-caret"></span>
+          </a>
+        </div>
+      </header>
+      <section class="row">
+        <div class="col-md-2">
+          <div id="profile-container" class="profile profile-holder">
+
+
+          </div>
+        </div>
+        <div class="col-md-10">
+          <nav class="nav-bar1 row">
+            <a href="#" class="overview col-md-1">Overview</a>
+            <a href="#" class="repositories col-md-1">Repositories <span class="counter">19</span></a>
+            <a href="#" class="stars col-md-1">Stars <span class="counter">1</span></a>
+            <a href="#" class="followers col-md-1">Followers <span class="counter">0</span></a>
+            <a href="#" class="following col-md-1">Following <span class="counter">0</span></a>
+          </nav>
+          <nav class="nav-bar2">
+            <input type="text" class="search2" placeholder="Search repositories...">
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">Type: All
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu">
+              </ul>
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">Language: All
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu">
+              </ul>
+              <a href="#" class="btn btn-primary"><span class="octicon octicon-repo"></span>New</a>
+            </div>
+          </nav>
+          <div id="repo-container" class="repos">
+
+          </div>
+      </div>
+    </section>
+    </div>
+
+    <script id="profile-template" type="text/x-handlebars-template">
+        <a href="{{html_url}}"><img src="{{avatar_url}}" alt="" class="picture"></a>
+        <h3 class="name">{{name}}</h3>
+        <p class="username">{{login}}</p>
+        <p class="bio">{{bio}}</p>
+        <button class="edit-profile">Edit Profile</button>
+
+      <div class="email-blog-join">
+        <li class="location"><span class="octicon octicon-location"></span> {{location}}</li>
+        <li class="email"><span class="octicon octicon-mail"></span><a href="#"> {{email}}</a></li>
+        <li class="blog"><span class="octicon octicon-link"></span><a href="#"> {{blog}}</a><li>
+        <li class="join-date"><span class="octicon octicon-clock"></span> {{created_at}}</li>
+      </div>
+      <div class="organizations">
+        <h5>Organizations</h5>
+        <div class="icons">
+          <span><img class="icon" src="https://avatars3.githubusercontent.com/u/20672988?v=3&s=70" alt=""></span>
+        </div>
+      </div>
+    </script>
+
+    <script id="repo-template" type="text/x-handlebars-template">
+      <div class="row repo">
+        <div class="col-md-6">
+          <a class="repo-link" href="{{svn_url}}">{{name}}</a>
+          <p class="description">{{description}}</p>
+        </div>
+        <div class="col-md-3">
+          <p class="activity-bar">*^^**^^^**^^*</p>
+        </div>
+        <div class="col-md-2">
+          <p class="language"><span class="octicon octicon-primitive-dot"></span>{{language}}</p>
+        </div>
+        <div class="col-md-1">
+          <p class="stargazers"><span class="octicon octicon-star"></span>{{stargazers_count}}</p>
+        </div>
+      </div>
+    </script>
+    <script src="js/bundle.js"></script>
+  </body>
+</html>
